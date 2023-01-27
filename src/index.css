@@ -7,3 +7,37 @@
   background-color: #242424;
 
 }
+.category-close{ /* När category- menyn är stängd*/
+  background-color: green;
+  
+}
+.category-open{ /* När category- menyn är öppen*/
+  background-color: coral;
+}
+.category{ /* wrappen runt alla kategorier */
+  color: blue;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  place-items: center;
+}
+.category svg{
+  transition: all 200ms ease-in;
+}
+.category.category-open svg{
+  transform: rotate(-180deg);
+}
+
+.menu-close{ /* när category är dold*/
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-25px);
+}
+.menu-open{ /*När category är visible*/
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.menu-list{
+  transition: all 250ms ease;
+}
