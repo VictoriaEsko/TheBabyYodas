@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Dataid from './pages/dataid'
 
 function App() {
 
