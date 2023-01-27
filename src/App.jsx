@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import { useState } from "react";
+
+import Data from "./pages/data";
+// import Dataid from "./pages/dataid"
 
 function App() {
-
-  return (
-    <div className="App">
-   
-    </div>
-  )
+  return <div className="App">
+    <Data />
+  </div>;
 }
 
-export default App
+export default App;
