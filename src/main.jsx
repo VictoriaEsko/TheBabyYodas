@@ -8,6 +8,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter> //wrap our entire application in the router
     <App />
+    <h1>hej</h1>
     </BrowserRouter>
   </React.StrictMode>,
 )
+
+console.log("hallo")
