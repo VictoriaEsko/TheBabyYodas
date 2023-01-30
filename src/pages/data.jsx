@@ -6,7 +6,7 @@ export default function data() {
 
   const fetchApi = async () => {
     const res = await axios.get(`https://swapi.dev/api/`);
-    setData(res.data.results);
+    setData(res.data);
     console.log(res)
   };
 
