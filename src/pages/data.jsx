@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function starWarsData() {
+export default function data() {
   const [data, setData] = useState([]);
 
   const fetchApi = async () => {

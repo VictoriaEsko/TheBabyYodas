@@ -18,6 +18,7 @@ function App() {
     <div className="App">
     <Routes>
       <Route path="/" element={<Start />} />
+      <Route path="/data" element={<Data />} />
       <Route path="/people" element={<People />} />
       <Route path="/planets" element={<Planets/>} />
       <Route path="/films" element={<Films/>} />
@@ -25,8 +26,6 @@ function App() {
       <Route path="/starships" element={<Starships/>} />
       <Route path="/vehicles" element={<Vehicles/>} />
     </Routes>
-    <h1>Hej</h1>
-    <Data/>
     </div>
   );
 }
