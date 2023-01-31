@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function catVehicles() {
   return (
-    <div>catVehicles</div>
+    <div className='category-class'>VEHICLES</div>
   )
 }
