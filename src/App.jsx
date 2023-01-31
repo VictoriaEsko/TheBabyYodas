@@ -21,6 +21,7 @@ export default function App() {
       {/* <Route path="/vehicles:id" element={<DataId/>} /> */}
       <Route path="/starships" element={<Data/>} />
     </Routes>
+    <Data/>
     </div>
   );
 }
