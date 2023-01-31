@@ -41,3 +41,7 @@
 .menu-list{
   transition: all 250ms ease;
 }
+.cat-class{
+  background-color: gray;
+  color: aquamarine;
+}

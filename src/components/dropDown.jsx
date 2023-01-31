@@ -1,3 +1,4 @@
+import { Route, Routes, Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function dropDown() {
@@ -22,22 +23,22 @@ export default function dropDown() {
         <div className={`menu-list + ${state ? "menu-open" : "menu-close"}`}>
           <ul>
             <li>
-              <a href="">People</a>
+              <Link to="/people">People</Link>
             </li>
             <li>
-              <a href="">Planets</a>
+              <Link to="/planets">Planets</Link>
             </li>
             <li>
-              <a href="">Films</a>
+              <Link to="/films">Films</Link>
             </li>
             <li>
-              <a href="">Species</a>
+              <Link to="/species">Species</Link>
             </li>
             <li>
-              <a href="">Vehicles</a>
+              <Link to="/starships">Starships</Link>
             </li>
             <li>
-              <a href="">Starships</a>
+              <Link to="/vehicles">Vehicles</Link>
             </li>
           </ul>
         </div>
