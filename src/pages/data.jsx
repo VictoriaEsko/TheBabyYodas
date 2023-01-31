@@ -9,10 +9,18 @@ export default function data() {
     setData(res.data);
     console.log(res.data);
   };
+  const fetchPeople = async () => {
+    const resp = await axios.get(`https://swapi.dev/api/people/`);
+    setData(resp.data);
+    console.log(resp.data);
+  }
 
   useEffect(() => {
     fetchApi();
+    fetchPeople();
   }, []);
 
-  return <div></div>;
+  return <div>
+    
+  </div>;
 }

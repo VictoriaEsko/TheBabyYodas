@@ -16,6 +16,7 @@ import Vehicles from "./pages/catVehicles"
 function App() {
   return ( 
     <div className="App">
+      <Data/>
     <Routes>
       <Route path="/" element={<Start />} />
       <Route path="/data" element={<Data />} />
@@ -29,5 +30,6 @@ function App() {
     </div>
   );
 }
+console.log("hello")
 
 export default App;
