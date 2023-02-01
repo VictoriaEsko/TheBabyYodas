@@ -1,6 +1,4 @@
-import { useState } from 'react'
-import Dataid from './pages/dataid'
-import { useState } from "react";
+// import Dataid from './pages/dataid'
 
 import Data from "./pages/data";
 // import Dataid from "./pages/dataid"
