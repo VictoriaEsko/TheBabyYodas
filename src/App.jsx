@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom"
 
 import Start from "./pages/start";
 import Data from "./pages/data";
-// import DataId from "./pages/dataid";
+
 
 
 export default function App() {

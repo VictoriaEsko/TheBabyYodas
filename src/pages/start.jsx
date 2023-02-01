@@ -1,4 +1,4 @@
-import Dropdown from "../components/dropDown"
+import Dropdown from "../components/dropDown";
 
 export default function start() {
 
