@@ -8,7 +8,7 @@ export default function fetchVehicles() {
       .then((response) => response.json())
       .then((data) => {
         setData(data.results);
-        console.log(data.results[0]);
+        // console.log(data.results[0]);
       });
   }, []);
 
@@ -20,11 +20,11 @@ export default function fetchVehicles() {
       <>
         {data &&
           data.map((vehicles) => (
-            <>
-              <p>{vehicles.title}</p>
-              <p>{vehicles.mass}</p>
+            <div key={vehicles.url}>
+              <p>{vehicles.name}</p>
+              <p>{vehicles.model}</p>
               <br />
-            </>
+            </div>
           ))}
       </>
     );

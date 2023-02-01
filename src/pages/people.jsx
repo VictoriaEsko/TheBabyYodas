@@ -8,7 +8,7 @@ export default function fetchPeople() {
       .then((response) => response.json())
       .then((data) => {
         setData(data.results);
-        console.log(data.results[0]);
+        // console.log(data.results[0]);
       });
   }, []);
 
@@ -20,11 +20,11 @@ export default function fetchPeople() {
       <>
         {data &&
           data.map((people) => (
-            <>
+            <div key={people.url}>
               <p>{people.name}</p>
               <p>{people.mass}</p>
               <br />
-            </>
+            </div>
           ))}
       </>
     );

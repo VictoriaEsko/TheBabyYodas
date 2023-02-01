@@ -8,7 +8,7 @@ export default function fetchSpecies() {
       .then((response) => response.json())
       .then((data) => {
         setData(data.results);
-        console.log(data.results[0]);
+        // console.log(data.results[0]);
       });
   }, []);
 
@@ -20,11 +20,11 @@ export default function fetchSpecies() {
       <>
         {data &&
           data.map((species) => (
-            <>
+            <div key={species.url}>
               <p>{species.name}</p>
               <p>{species.classification}</p>
               <br />
-            </>
+            </div>
           ))}
       </>
     );

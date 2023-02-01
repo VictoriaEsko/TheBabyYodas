@@ -8,7 +8,7 @@ export default function fetchPlanets() {
       .then((response) => response.json())
       .then((data) => {
         setData(data.results);
-        console.log(data.results[0]);
+        // console.log(data.results[0]);
       });
   }, []);
 
@@ -20,11 +20,11 @@ export default function fetchPlanets() {
       <>
         {data &&
           data.map((planets) => (
-            <>
+            <div key={planets.url}>
               <p>{planets.name}</p>
               <p>{planets.gravity}</p>
               <br />
-            </>
+            </div>
           ))}
       </>
     );

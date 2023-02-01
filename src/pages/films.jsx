@@ -8,7 +8,7 @@ export default function fetchFilms() {
       .then((response) => response.json())
       .then((data) => {
         setData(data.results);
-        console.log(data.results[0]);
+        // console.log(data.results[0]);
       });
   }, []);
 
@@ -28,11 +28,11 @@ export default function fetchFilms() {
       <>
         {data &&
           data.map((films) => (
-            <>
+            <div key={films.url}>
               <p>{films.title}</p>
               <p>{films.producer}</p>
               <br />
-            </>
+            </div>
           ))}
       </>
     );

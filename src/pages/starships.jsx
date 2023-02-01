@@ -8,7 +8,7 @@ export default function fetchStarships() {
       .then((response) => response.json())
       .then((data) => {
         setData(data.results);
-        console.log(data.results[0]);
+        // console.log(data.results[0]);
       });
   }, []);
 
@@ -20,11 +20,11 @@ export default function fetchStarships() {
       <>
         {data &&
           data.map((starships) => (
-            <>
+            <div key={starships.url}>
               <p>{starships.name}</p>
               <p>{starships.model}</p>
               <br />
-            </>
+            </div>
           ))}
       </>
     );
