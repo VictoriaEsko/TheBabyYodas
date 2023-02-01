@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function fetchData() {
+export default function fetchStarships() {
   const [data, setData] = useState("");
 
   useEffect(() => {

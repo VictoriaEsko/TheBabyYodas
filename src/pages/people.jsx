@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
-export default function fetchData() {
+export default function fetchPeople() {
   const [data, setData] = useState("");
 
   useEffect(() => {

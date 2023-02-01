@@ -28,7 +28,8 @@ export default function App() {
       <Route path="/starships" element={<Starships/>} />
       <Route path="/films" element={<Films/>} />
     </Routes>
-    <Data/>
+    {/* <Data/> */}
+    {/* <Start/> */}
     </div>
   );
 }
