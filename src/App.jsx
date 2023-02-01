@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import { Route, Routes } from "react-router-dom"
 import Data from "./pages/data";
+// import Id from "./pages/dataid"
 // import Dataid from "./pages/dataid"
 // import DropDown from "./components/dropDown"; ska denna verkligen va här?
 
@@ -20,8 +21,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Start />} />
       <Route path="/data" element={<Data />} />
-      <Route path="/people" element={<People />} />
-      <Route path="/planets" element={<Planets/>} />
+      <Route path="/people" element={<Data />} />
+      <Route path="/planets" element={<Data/>} />
       <Route path="/films" element={<Films/>} />
       <Route path="/species" element={<Species/>} />
       <Route path="/starships" element={<Starships/>} />

@@ -1,13 +1,11 @@
 import { Route, Routes, Link } from "react-router-dom"
 import { useState } from "react";
+import fetchData from "../pages/data";
 
 export default function dropDown() {
   const [state, setState] = useState(false);
 
-  //   const toggle = ()=>{
-  //     setState(!state);
-  //   }
-
+  
   return (
     <div
       onClick={() => {
