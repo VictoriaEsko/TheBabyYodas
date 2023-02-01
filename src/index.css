@@ -8,14 +8,14 @@
 
 }
 .category-close{ /* När category- menyn är stängd*/
-  background-color: green;
+  background-color: rgb(37, 26, 44);
   
 }
 .category-open{ /* När category- menyn är öppen*/
-  background-color: coral;
+  background-color: rgb(120, 93, 115);
 }
 .category{ /* wrappen runt alla kategorier */
-  color: blue;
+  color: rgb(220, 149, 231);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -40,8 +40,4 @@
 }
 .menu-list{
   transition: all 250ms ease;
-}
-.cat-class{
-  background-color: gray;
-  color: aquamarine;
 }

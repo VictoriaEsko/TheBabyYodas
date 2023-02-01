@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 
 export default function fetchSpecies() {
   const [data, setData] = useState("");
 
   useEffect(() => {
-    fetch('https://swapi.dev/api/species/')
+    fetch("https://swapi.dev/api/species/")
       .then((response) => response.json())
       .then((data) => {
         setData(data.results);
@@ -13,28 +12,21 @@ export default function fetchSpecies() {
       });
   }, []);
 
-  //   useEffect(() => {
-  //   fetch('https://swapi.dev/api/')
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setData(data.results);
-  //       console.log(data.results);
-  //     });
-  // }, []);
-  let url = window.location.pathname
-  console.log(url)
+  let url = window.location.pathname;
+  console.log(url);
 
-  if(url === "/species"){
-    return(
+  if (url === "/species") {
+    return (
       <>
-    {data && data.map((species) => (
-      <>
-      <p>{species.name}</p>
-      <p>{species.classification}</p>
-      <p>halloj</p>
+        {data &&
+          data.map((species) => (
+            <>
+              <p>{species.name}</p>
+              <p>{species.classification}</p>
+              <br />
+            </>
+          ))}
       </>
-    ))}
-    </>
-    )
-  } 
+    );
+  }
 }

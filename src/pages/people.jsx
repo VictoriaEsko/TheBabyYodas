@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
 
 export default function fetchPeople() {
   const [data, setData] = useState("");
 
   useEffect(() => {
-    fetch('https://swapi.dev/api/people/')
+    fetch("https://swapi.dev/api/people/")
       .then((response) => response.json())
       .then((data) => {
         setData(data.results);
@@ -14,63 +12,34 @@ export default function fetchPeople() {
       });
   }, []);
 
-  //   useEffect(() => {
-  //   fetch('https://swapi.dev/api/')
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setData(data.results);
-  //       console.log(data.results);
-  //     });
-  // }, []);
-  let url = window.location.pathname
-  console.log(url)
+  let url = window.location.pathname;
+  console.log(url);
 
-  if(url === "/people"){
-    return(
+  if (url === "/people") {
+    return (
       <>
-    {data && data.map((people) => (
-      <>
-      <p>{people.name}</p>
-      <p>{people.mass}</p>
-      <p>halloj</p>
+        {data &&
+          data.map((people) => (
+            <>
+              <p>{people.name}</p>
+              <p>{people.mass}</p>
+              <br />
+            </>
+          ))}
       </>
-    ))}
-    </>
-    )
-  } 
-
-  // return (
-  //   <>
-  //     {data && data.map((people) => (
-  //       <>
-  //       <p>{people.name}</p>
-  //       <p>{people.mass}</p>
-
-  //       </>
-  //     ))}
-  //   </>
-  //   <>
-  //   {data && data.map((people) => (
-  //     <>
-  //     </>
-  //   ))}
-  //   </>
-  // )
-
-  
+    );
+  }
 }
-
-
 
 // const [data, setData] = useState("");
 //   const [array, setArray] = useState(null)
 
 //   let id = [
 //     "people",
-//     "planets", 
-//     "films", 
-//     "species", 
-//     "vehicles", 
+//     "planets",
+//     "films",
+//     "species",
+//     "vehicles",
 //     "starships"
 //   ];
 
@@ -79,18 +48,13 @@ export default function fetchPeople() {
 //     setData(res.data.results[0]);
 //     console.log(res.data.results[0]);
 //   };
-  
-
- 
 
 //   useEffect(() => {
 //    if (array !== null) {
-//      fetchApi() 
+//      fetchApi()
 //    }
- 
+
 //   }, [array]);
-
-
 
 //   return (
 //     <>
@@ -102,4 +66,3 @@ export default function fetchPeople() {
 //      <button onClick={() => setArray(5)}>starships</button>
 //    </>
 //   )
-
