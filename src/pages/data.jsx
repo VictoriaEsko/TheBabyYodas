@@ -14,8 +14,8 @@ export default function fetchData() {
     "starships"
   ];
 
-  const fetchId = async () => {
-    const res = await axios.get(`https://swapi.dev/api/${id[array]}/`);
+  const fetchApi = async () => {
+    const res = await axios.get(`https://swapi.dev/api`);
     setData(res.data);
     console.log(res);
   };
@@ -27,14 +27,5 @@ export default function fetchData() {
  
   }, [array]);
 
-  return (
-    <>
-      <button onClick={() => setArray(0)}>people</button>
-      <button onClick={() => setArray(1)}>planet</button>
-      <button onClick={() => setArray(2)}>films</button>
-      <button onClick={() => setArray(3)}>species</button>
-      <button onClick={() => setArray(4)}>vehicles</button>
-      <button onClick={() => setArray(5)}>starships</button>
-    </>
-  )
+  return <div></div>;
 }
