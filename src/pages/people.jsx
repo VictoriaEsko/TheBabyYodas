@@ -13,17 +13,48 @@ export default function fetchData() {
       });
   }, []);
 
-  return (
-    <>
-      {data && data.map((people) => (
-        <>
-        <p>{people.name}</p>
-        <p>{people.mass}</p>
+  //   useEffect(() => {
+  //   fetch('https://swapi.dev/api/')
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setData(data.results);
+  //       console.log(data.results);
+  //     });
+  // }, []);
+  let url = window.location.pathname
+  console.log(url)
 
-        </>
-      ))}
+  if(url === "/people"){
+    return(
+      <>
+    {data && data.map((people) => (
+      <>
+      <p>{people.name}</p>
+      <p>{people.mass}</p>
+      <p>halloj</p>
+      </>
+    ))}
     </>
-  )
+    )
+  } 
+
+  // return (
+  //   <>
+  //     {data && data.map((people) => (
+  //       <>
+  //       <p>{people.name}</p>
+  //       <p>{people.mass}</p>
+
+  //       </>
+  //     ))}
+  //   </>
+  //   <>
+  //   {data && data.map((people) => (
+  //     <>
+  //     </>
+  //   ))}
+  //   </>
+  // )
 
   
 }
