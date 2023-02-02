@@ -10,7 +10,21 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+img {
+  margin: 10em 0em 0em 25em;
+}
+.title {
+  color: #e7d539;
+  margin: 0em 0em 0em 21em;
+}
+.category-close,
+.category-open,
+.category {
+  color: #80b6e8;
+  margin: 10em 15em 10em 15em;
+}
 .category-close {
+  /* margin-top: 10rem; */
   /* När category- menyn är stängd*/
   background-color: rgb(37, 26, 44);
 }
@@ -20,7 +34,7 @@ body {
 }
 .category {
   /* wrappen runt alla kategorier */
-  color: rgb(220, 149, 231);
+
   display: flex;
   justify-content: center;
   flex-direction: column;
