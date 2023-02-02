@@ -17,16 +17,25 @@ export default function fetchVehicles() {
 
   if (url === "/vehicles") {
     return (
-      <>
+      <div className="cards">
         {data &&
           data.map((vehicles) => (
-            <div key={vehicles.url}>
-              <p>{vehicles.name}</p>
-              <p>{vehicles.model}</p>
-              <br />
+            <div className="card" key={vehicles.url}>
+            <ul className="cardItems">
+              <li className="cardItem">Name: {vehicles.name}</li>
+              <li className="cardItem">Model: {vehicles.model}</li>
+              <li className="cardItem">Cargo Capacity:{vehicles.cargo_capacity}</li>
+              <li className="cardItem">Consumables: {vehicles.consumables}</li>
+              <li className="cardItem">Cost In Credits: {vehicles.cost_in_credits}</li>
+              <li className="cardItem">Length: {vehicles.length}</li>
+              <li className="cardItem">Manufacturer: {vehicles.manufacturer}</li>
+              <li className="cardItem">Max Atmosphering Speed: {vehicles.max_atmosphering_speed}</li>
+              <li className="cardItem">Passenger: {vehicles.passengers}</li>
+              <li className="cardItem">Crew: {vehicles.crew}</li>
+            </ul>
             </div>
           ))}
-      </>
+      </div>
     );
   }
 }

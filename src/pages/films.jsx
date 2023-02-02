@@ -25,16 +25,21 @@ export default function fetchFilms() {
 
   if (url === "/films") {
     return (
-      <>
+      <div className="cards">
         {data &&
           data.map((films) => (
-            <div key={films.url}>
-              <p>{films.title}</p>
-              <p>{films.producer}</p>
-              <br />
+            <div className="card" key={films.url}>
+            <ul className="cardItems">
+              <li className="cardItem">Title: {films.title}</li>
+              <li className="cardItem">Episode: {films.episode_id}</li>
+              <li className="cardItem">Release Date: {films.release_date}</li>
+              <li className="cardItem">Producer: {films.producer}</li>
+              <li className="cardItem">Director: {films.director}</li>
+              <li className="cardItem">Opening Crawl: {films.opening_crawl}</li>
+            </ul>
             </div>
           ))}
-      </>
+      </div>
     );
   }
 }

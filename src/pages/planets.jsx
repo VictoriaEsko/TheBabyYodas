@@ -17,7 +17,7 @@ export default function fetchPlanets() {
 
   if (url === "/planets") {
     return (
-      <>
+      <div>
         {data &&
           data.map((planets) => (
             <div key={planets.url}>
@@ -26,7 +26,7 @@ export default function fetchPlanets() {
               <br />
             </div>
           ))}
-      </>
+      </div>
     );
   }
 }

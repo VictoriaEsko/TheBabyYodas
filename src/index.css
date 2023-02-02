@@ -41,3 +41,27 @@
 .menu-list{
   transition: all 250ms ease;
 }
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cardItems {
+  background-color: rgb(183, 177, 177);
+  border-radius: 3%;
+  width: 80%;
+  padding: 1em;
+}
+
+.cardItem {
+  list-style: none;
+
+  padding: 0.5em;
+}
+
+@media screen and (max-width: 600px)  {
+  
+  
+}
