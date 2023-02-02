@@ -3,6 +3,7 @@ import axios from "axios";
 
 export default function fetchFilms() {
   const [data, setData] = useState("");
+  const [ modal, setModal ] = useState(false);
 
   useEffect(() => {
     fetch('https://swapi.dev/api/films/')
@@ -31,9 +32,16 @@ export default function fetchFilms() {
       <>
       <p>{films.title}</p>
       <p>{films.producer}</p>
+      <p>Opening crawl: <button className="modal-btn" onClick={() =>
+    setModal(!modal)}>see content</button></p>
       <p>halloj</p>
       </>
     ))}
+    <div className={`modal ${modal ? "active" : "inactive"}`}>
+        <h2>{films.title}</h2>
+        <p>{films.opening_crawl}</p>
+        <button className="modal-btn" onClick={() => setModal(!modal)}>Close</button>
+    </div>
     </>
     )
   } 

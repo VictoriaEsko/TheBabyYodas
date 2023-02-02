@@ -24,6 +24,7 @@ export default function fetchPeople() {
   // }, []);
   let url = window.location.pathname
   console.log(url)
+  
 
   if(url === "/people"){
     return(
@@ -32,7 +33,7 @@ export default function fetchPeople() {
       <>
       <p>{people.name}</p>
       <p>{people.mass}</p>
-      <p>halloj</p>
+      <button>läs mer</button>
       </>
     ))}
     </>
