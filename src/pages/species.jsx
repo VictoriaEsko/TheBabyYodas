@@ -1,40 +1,40 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 
 export default function fetchSpecies() {
   const [data, setData] = useState("");
 
   useEffect(() => {
-    fetch('https://swapi.dev/api/species/')
+    fetch("https://swapi.dev/api/species/")
       .then((response) => response.json())
       .then((data) => {
         setData(data.results);
-        console.log(data.results[0]);
+        // console.log(data.results[0]);
       });
   }, []);
 
-  //   useEffect(() => {
-  //   fetch('https://swapi.dev/api/')
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setData(data.results);
-  //       console.log(data.results);
-  //     });
-  // }, []);
-  let url = window.location.pathname
-  console.log(url)
+  let url = window.location.pathname;
+  console.log(url);
 
-  if(url === "/species"){
-    return(
-      <>
-    {data && data.map((species) => (
-      <>
-      <p>{species.name}</p>
-      <p>{species.classification}</p>
-      <p>halloj</p>
-      </>
-    ))}
-    </>
-    )
-  } 
+  if (url === "/species") {
+    return (
+      <div className="cards">
+        {data &&
+          data.map((species) => (
+            <div className="card" key={species.url}>
+            <ul className="cardItems">
+              <li className="cardItem">Name: {species.name}</li>
+              <li className="cardItem">Classification: {species.classification}</li>
+              <li className="cardItem">Average Heigth: {species.average_heigth}</li>
+              <li className="cardItem">Average Lifespan: {species.avarage_lifespan}</li>
+              <li className="cardItem">Designation: {species.designation}</li>
+              <li className="cardItem">Eye Color:{species.eye_colors}</li>
+              <li className="cardItem">Hair Color: {species.hair_colors}</li>
+              <li className="cardItem">Language: {species.language}</li>
+              <li className="cardItem">Skin Color: {species.skin_colors}</li>
+            </ul>
+            </div>
+          ))}
+      </div>
+    );
+  }
 }

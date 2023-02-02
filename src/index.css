@@ -8,14 +8,14 @@
 
 }
 .category-close{ /* När category- menyn är stängd*/
-  background-color: green;
+  background-color: rgb(37, 26, 44);
   
 }
 .category-open{ /* När category- menyn är öppen*/
-  background-color: coral;
+  background-color: rgb(120, 93, 115);
 }
 .category{ /* wrappen runt alla kategorier */
-  color: blue;
+  color: rgb(220, 149, 231);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -41,7 +41,63 @@
 .menu-list{
   transition: all 250ms ease;
 }
-.cat-class{
-  background-color: gray;
-  color: aquamarine;
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cardItems {
+  background-color: rgb(183, 177, 177);
+  border-radius: 3%;
+  width: 80%;
+  padding: 1em;
+}
+
+.cardItem {
+  list-style: none;
+
+  padding: 0.5em;
+}
+.modal{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 20px 30px;
+  background-color: rgba(36, 36, 36, 0.8);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  color: rgb(217, 217, 217);
+  width: 50%;
+  height: fit-content;
+  transition: all 250ms ease;
+}
+.modal.inactive{
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal.active{
+  visibility: visible;
+  opacity: 1;
+}
+.modalBtn{
+  background: none;
+  outline: none;
+  border: none;
+  color: rgb(217, 217, 217);
+  padding: 15px 35px;
+  background-color: rgba(97, 97, 97, 0.3);
+  backdrop-filter: blur(5px);
+  margin-top: 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px)  {
+  
+  
 }
