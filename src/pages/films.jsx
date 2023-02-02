@@ -25,10 +25,12 @@ export default function fetchFilms() {
 
   if (url === "/films") {
     return (
+      <>
+      <h1 className="pageTitle">Films</h1>
       <div className="cards">
         {data &&
           data.map((films) => (
-            <div className="card" key={films.url}>
+            <div className="card films" key={films.url}>
             <ul className="cardItems">
               <li className="cardItem">Title: {films.title}</li>
               <li className="cardItem">Episode: {films.episode_id}</li>
@@ -40,6 +42,7 @@ export default function fetchFilms() {
             </div>
           ))}
       </div>
+      </>
     );
   }
 }

@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Mono';
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -9,6 +9,7 @@
 body {
   margin: 0;
   box-sizing: border-box;
+  margin-bottom: 3em;
 }
 .category-close {
   /* När category- menyn är stängd*/
@@ -49,16 +50,29 @@ body {
   transition: all 250ms ease;
 }
 
+.cards{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 2em;
+}
+
+
 .card {
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  background-color: rgba(5, 12, 47, 0.674);
+  box-shadow: 2px 4px 10px rgba(0, 5, 29); 
+  border-radius: 3%;
+  width: 60%;
+  /* max-width: 40vw; */
 }
 
 .cardItems {
-  background-color: rgba(26, 32, 80, 0.441);
-  color: #fff;
-  border-radius: 3%;
+  color: rgba(238, 241, 44, 0.87);
   width: 80%;
   padding: 1em;
 }
@@ -67,6 +81,14 @@ body {
   list-style: none;
 
   padding: 0.5em;
+}
+
+.pageTitle {
+  color: rgba(207, 210, 36, 0.87);
+  text-shadow: 1px 2px 15px #c6c662;
+
+  text-align: center;
+  margin-bottom: 2em;
 }
 
 /* .cards {
@@ -83,3 +105,51 @@ body {
   flex: 1;
   border: 2px solid white;
 } */
+
+@media screen and (min-width: 840px) {
+
+  .cards{
+    flex-direction: row;
+    flex-wrap: wrap;
+    place-content: center;
+  }
+
+  .card {
+    height: 55vh;
+    width: 30em;
+  }
+
+  .films{
+    height: 70vh;
+  }
+
+  .people{
+    height: 41vh;
+  }
+
+  .planets .species .vehicles{
+    height: 50vh;
+  }
+
+  .starships{
+    height: 66vh;
+  }
+
+  .cardItems{
+    width: 80%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .card{
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+    .card{
+      width: 30em;
+    }
+}

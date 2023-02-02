@@ -17,10 +17,12 @@ export default function fetchVehicles() {
 
   if (url === "/vehicles") {
     return (
+      <>
+      <h1 className="pageTitle">Vehicles</h1>
       <div className="cards">
         {data &&
           data.map((vehicles) => (
-            <div className="card" key={vehicles.url}>
+            <div className="card vehicles" key={vehicles.url}>
             <ul className="cardItems">
               <li className="cardItem">Name: {vehicles.name}</li>
               <li className="cardItem">Model: {vehicles.model}</li>
@@ -36,6 +38,7 @@ export default function fetchVehicles() {
             </div>
           ))}
       </div>
+      </>
     );
   }
 }

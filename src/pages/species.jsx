@@ -17,10 +17,12 @@ export default function fetchSpecies() {
 
   if (url === "/species") {
     return (
+      <>
+      <h1 className="pageTitle">Species</h1>
       <div className="cards">
         {data &&
           data.map((species) => (
-            <div className="card" key={species.url}>
+            <div className="card species" key={species.url}>
             <ul className="cardItems">
               <li className="cardItem">Name: {species.name}</li>
               <li className="cardItem">Classification: {species.classification}</li>
@@ -35,6 +37,7 @@ export default function fetchSpecies() {
             </div>
           ))}
       </div>
+      </>
     );
   }
 }

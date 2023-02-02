@@ -17,23 +17,27 @@ export default function fetchPlanets() {
 
   if (url === "/planets") {
     return (
+      <>
+      <h1 className="pageTitle">Planets</h1>
       <div className="cards">
         {data &&
           data.map((planets) => (
-            <div key={planets.url} className="card" >
-              <p>{planets.name}</p>
-              <p>{planets.gravity}</p>
-              <p>{planets.climate}</p>
-              <p>{planets.population}</p>
-              <p>{planets.terrain}</p>
-              <p>{planets.rotation_period}</p>
-              <p>{planets.orbital_period}</p>
-              <p>{planets.surface_water}</p>
-              <p>{planets.diameter}</p>
-              <br />
+            <div key={planets.url} className="card planets" >
+            <ul className="cardItems">
+              <li className="cardItem">Name: {planets.name}</li>
+              <li className="cardItem">Gravity: {planets.gravity}</li>
+              <li className="cardItem">Climate: {planets.climate}</li>
+              <li className="cardItem">Population: {planets.population}</li>
+              <li className="cardItem">Terrain: {planets.terrain}</li>
+              <li className="cardItem">Rotation Period: {planets.rotation_period}</li>
+              <li className="cardItem">Orbital Period: {planets.orbital_period}</li>
+              <li className="cardItem">Surface Water: {planets.surface_water}</li>
+              <li className="cardItem">Diameter: {planets.diameter}</li>
+            </ul>
             </div>
           ))}
       </div>
+      </>
     );
   }
 }
