@@ -3,42 +3,49 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
+  background-image: url(./Img/hd-wallpaper-2695569_1920.jpg);
   background-color: #242424;
-
 }
-.category-close{ /* När category- menyn är stängd*/
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+.category-close {
+  /* När category- menyn är stängd*/
   background-color: rgb(37, 26, 44);
-  
 }
-.category-open{ /* När category- menyn är öppen*/
+.category-open {
+  /* När category- menyn är öppen*/
   background-color: rgb(120, 93, 115);
 }
-.category{ /* wrappen runt alla kategorier */
+.category {
+  /* wrappen runt alla kategorier */
   color: rgb(220, 149, 231);
   display: flex;
   justify-content: center;
   flex-direction: column;
   place-items: center;
 }
-.category svg{
+.category svg {
   transition: all 200ms ease-in;
 }
-.category.category-open svg{
+.category.category-open svg {
   transform: rotate(-180deg);
 }
 
-.menu-close{ /* när category är dold*/
+.menu-close {
+  /* när category är dold*/
   visibility: hidden;
   opacity: 0;
   transform: translateY(-25px);
 }
-.menu-open{ /*När category är visible*/
+.menu-open {
+  /*När category är visible*/
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
-.menu-list{
+.menu-list {
   transition: all 250ms ease;
 }
 
@@ -49,7 +56,8 @@
 }
 
 .cardItems {
-  background-color: rgb(183, 177, 177);
+  background-color: rgba(26, 32, 80, 0.441);
+  color: #fff;
   border-radius: 3%;
   width: 80%;
   padding: 1em;
@@ -61,7 +69,17 @@
   padding: 0.5em;
 }
 
-@media screen and (max-width: 600px)  {
-  
-  
-}
+/* .cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #e7d539;
+} */
+/* .card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  border: 2px solid white;
+} */
