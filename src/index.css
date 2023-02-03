@@ -111,10 +111,10 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px 30px;
-  background-color: rgba(36, 36, 36, 0.8);
+  background-color: rgba(5, 12, 47, 0.674);
   border-radius: 20px;
   backdrop-filter: blur(5px);
-  color: rgb(217, 217, 217);
+  color: rgba(238, 241, 44, 0.87);
   width: 50%;
   height: fit-content;
   transition: all 250ms ease;
@@ -134,9 +134,9 @@ body {
   background: none;
   outline: none;
   border: none;
-  color: rgb(217, 217, 217);
+  color: rgba(238, 241, 44, 0.87);
   padding: 15px 35px;
-  background-color: rgba(97, 97, 97, 0.3);
+  background-color: rgba(107, 115, 164, 0.3);
   backdrop-filter: blur(5px);
   margin-top: 2rem;
   border-radius: 20px;

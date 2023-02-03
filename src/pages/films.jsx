@@ -49,7 +49,6 @@ export default function fetchFilms() {
               <button className="modalBtn" onClick={() => setModal(!modal)}>Close</button>
             </div>
             </>
-
           ))}
       </div>
       </>
