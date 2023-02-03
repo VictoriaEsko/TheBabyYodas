@@ -8,7 +8,6 @@ export default function fetchPeople() {
       .then((response) => response.json())
       .then((data) => {
         setData(data.results);
-        // console.log(data.results[0]);
       });
   }, []);
 

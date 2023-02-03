@@ -6,10 +6,6 @@ export default function dropDown() {
   const [state, setState] = useState(false);
   
 
-  //   const toggle = ()=>{
-  //     setState(!state);
-  //   }
-
   return (
     <div
       onClick={() => {
@@ -21,9 +17,6 @@ export default function dropDown() {
       <h2>Choose category </h2>
       <MdKeyboardArrowDown />
       <div>
-        {/* <button onClick={toggle} className={`toggle-btn + ${state ? "toggle-close" : "toggle-open"}`}>
-          Category
-          </button> */}
         <div className={`menu-list + ${state ? "menu-open" : "menu-close"}`}>
           <ul>
             <li>

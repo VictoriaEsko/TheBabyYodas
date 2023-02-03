@@ -18,7 +18,6 @@ body {
 img {
   margin: auto;
   display: flex;
-  /* margin: 10em 0em 0em 25em; */
 }
 .title {
   display: flex;
@@ -26,10 +25,9 @@ img {
   justify-content: center;
   color: #e7d539;
   margin-top: -0.5em;
-  /* margin: 0em 0em 0em 21em; */
+
 }
 .back {
-  /* position: fixed; */
   left: 5px;
   top: 5px;
   border-radius: 50%;
@@ -66,7 +64,6 @@ img {
 }
 .category-open {
   /* När category- menyn är öppen*/
-  /* margin-top: 10px; */
   font-weight: 700;
   border-radius: var(--radius);
   font-size: 21px;
@@ -81,7 +78,6 @@ img {
   justify-content: center;
   flex-direction: column;
   place-items: center;
-  /* margin: 0em 15em 10em 15em; */
 }
 .category svg {
   transition: all 200ms ease-in;
@@ -115,7 +111,6 @@ img {
   cursor: pointer;
   user-select: none;
   border-radius: var(--radius);
-  /* z-index: 99; */
 }
 .menu-list ul li {
   list-style: none;
@@ -144,7 +139,6 @@ img {
   box-shadow: 2px 4px 10px rgba(0, 5, 29);
   border-radius: 3%;
   width: 60%;
-  /* max-width: 40vw; */
 }
 
 .cardItems {
@@ -163,7 +157,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   padding: 20px 30px;
   background-color: rgba(36, 36, 36, 0.8);
   border-radius: 20px;
@@ -202,21 +195,6 @@ img {
   text-align: center;
   margin-bottom: 2em;
 }
-
-/* .cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  color: #e7d539;
-} */
-/* .card {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-  border: 2px solid white;
-} */
 
 .modal {
   position: fixed;
@@ -286,8 +264,6 @@ img {
 
   .modal {
     position: absolute;
-    flex-wrap: wrap;
-
     width: 30em;
   }
 
