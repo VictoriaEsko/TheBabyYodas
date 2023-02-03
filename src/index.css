@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -64,7 +64,7 @@ img {
   transition: all 250ms ease;
 }
 
-.cards{
+.cards {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -72,14 +72,13 @@ img {
   gap: 2em;
 }
 
-
 .card {
   display: flex;
   align-items: center;
   flex-direction: column;
 
   background-color: rgba(5, 12, 47, 0.674);
-  box-shadow: 2px 4px 10px rgba(0, 5, 29); 
+  box-shadow: 2px 4px 10px rgba(0, 5, 29);
   border-radius: 3%;
   width: 60%;
   /* max-width: 40vw; */
@@ -120,9 +119,46 @@ img {
   border: 2px solid white;
 } */
 
-@media screen and (min-width: 840px) {
+.modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: rgba(36, 36, 36, 0.8);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  color: rgb(217, 217, 217);
+  width: 50%;
+  height: fit-content;
+  transition: all 250ms ease;
+}
 
-  .cards{
+.modal.inactive {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modalBtn {
+  background: none;
+  outline: none;
+  border: none;
+  color: rgb(217, 217, 217);
+  padding: 15px 35px;
+  background-color: rgba(97, 97, 97, 0.3);
+  backdrop-filter: blur(5px);
+  margin-top: 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 840px) {
+  .cards {
     flex-direction: row;
     flex-wrap: wrap;
     place-content: center;
@@ -133,37 +169,25 @@ img {
     width: 30em;
   }
 
-  .films{
-    height: 70vh;
-  }
-
-  .people{
+  .people {
     height: 41vh;
   }
 
-  .planets .species .vehicles{
+  .planets .species .vehicles {
     height: 50vh;
   }
 
-  .starships{
+  .starships {
     height: 66vh;
   }
 
-  .cardItems{
+  .cardItems {
     width: 80%;
   }
 }
-
 
 @media screen and (max-width: 600px) {
-
-  .card{
+  .card {
     width: 80%;
   }
-}
-
-@media screen and (min-width: 600px) {
-    .card{
-      width: 30em;
-    }
 }
