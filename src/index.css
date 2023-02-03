@@ -149,18 +149,16 @@ img {
   background-color: rgba(5, 12, 47, 0.674);
   box-shadow: 2px 4px 10px rgba(0, 5, 29);
   border-radius: 3%;
-  width: 60%;
+  width: 80%;
 }
 
 .cardItems {
   color: rgba(238, 241, 44, 0.87);
-  width: 80%;
   padding: 1em;
 }
 
 .cardItem {
   list-style: none;
-
   padding: 0.5em;
 }
 .modal {
@@ -206,9 +204,14 @@ img {
   text-align: center;
   margin-bottom: 2em;
 }
+.container{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
 
 .modal {
-  position: fixed;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,7 +220,7 @@ img {
   border-radius: 20px;
   backdrop-filter: blur(5px);
   color: rgba(238, 241, 44, 0.87);
-  width: 50%;
+  width: 70%;
   height: fit-content;
   transition: all 250ms ease;
 }
@@ -230,6 +233,7 @@ img {
 .modal.active {
   visibility: visible;
   opacity: 1;
+  z-index: 1;
 }
 
 .modalBtn {
@@ -260,6 +264,9 @@ img {
   .people {
     height: 41vh;
   }
+  .container{
+    position: relative;
+  }
 
   .planets .species .vehicles {
     height: 50vh;
@@ -276,5 +283,6 @@ img {
   .modal {
     position: absolute;
     width: 30em;
+    top: 10px;
   }
 }
