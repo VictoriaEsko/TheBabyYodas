@@ -21,14 +21,12 @@ img {
   display: flex;
   width: 60%;
 
-  /* margin: 10em 0em 0em 25em; */
 }
 .title {
   display: flex;
   font-size: 3em;
   justify-content: center;
   color: #e7d539;
-  /* margin: 0em 0em 0em 21em; */
 }
 
 .category-close {
@@ -72,7 +70,6 @@ img {
   margin: auto;
 
   border-radius: 10px;
-  /* margin: 0em 15em 10em 15em; */
 }
 
 .category svg {
@@ -214,6 +211,7 @@ img {
 
   .card {
     width: 30em;
+    min-height: 55vh;
   }
 
   .people {
