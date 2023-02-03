@@ -9,7 +9,6 @@ export default function fetchFilms() {
       .then((response) => response.json())
       .then((data) => {
         setData(data.results);
-        // console.log(data.results[0]);
       });
   }, []);
 
@@ -24,11 +23,13 @@ export default function fetchFilms() {
           {data &&
             data.map((films) => (
               <>
-                <div className="card films"  >
+                <div className="card films">
                   <ul className="cardItems">
                     <li className="cardItem">Title: {films.title}</li>
                     <li className="cardItem">Episode: {films.episode_id}</li>
-                    <li className="cardItem">Release Date: {films.release_date}</li>
+                    <li className="cardItem">
+                      Release Date: {films.release_date}
+                    </li>
                     <li className="cardItem">Producer: {films.producer}</li>
                     <li className="cardItem">Director: {films.director}</li>
                     <li className="cardItem">
@@ -43,10 +44,17 @@ export default function fetchFilms() {
                   </ul>
                 </div>
 
-                <div className={`modal ${films.title==modalTitle ? "active" : "inactive"}`}>
+                <div
+                  className={`modal ${
+                    films.title == modalTitle ? "active" : "inactive"
+                  }`}
+                >
                   <h2>{films.title}</h2>
                   <p>{films.opening_crawl}</p>
-                  <button className="modalBtn" onClick={() => setModalTitle(false)}>
+                  <button
+                    className="modalBtn"
+                    onClick={() => setModalTitle(false)}
+                  >
                     Close
                   </button>
                 </div>
