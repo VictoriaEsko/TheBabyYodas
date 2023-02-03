@@ -170,10 +170,12 @@ body {
   .cardItems {
     width: 80%;
   }
-}
 
-@media screen and (max-width: 600px) {
-  .card {
-    width: 80%;
+  .modal {
+    position: absolute;
+    flex-wrap: wrap;
+
+    width: 30em;
   }
+
 }

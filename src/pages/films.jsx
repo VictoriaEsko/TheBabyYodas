@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function fetchFilms() {
   const [data, setData] = useState("");
-  const [modal, setModal] = useState(false);
+  const [modalTitle, setModalTitle] = useState(false);
 
   useEffect(() => {
     fetch("https://swapi.dev/api/films/")
@@ -13,44 +13,46 @@ export default function fetchFilms() {
       });
   }, []);
 
-  //   useEffect(() => {
-  //   fetch('https://swapi.dev/api/')
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setData(data.results);
-  //       console.log(data.results);
-  //     });
-  // }, []);
   let url = window.location.pathname;
-  console.log(url)
+  console.log(url);
 
   if (url === "/films") {
     return (
       <>
-      <h1 className="pageTitle">Films</h1>
-      <div className="cards">
-        {data &&
-          data.map((films) => (
-            <>
-            <div className="card films" key={films.url}>
-            <ul className="cardItems">
-              <li className="cardItem">Title: {films.title}</li>
-              <li className="cardItem">Episode: {films.episode_id}</li>
-              <li className="cardItem">Release Date: {films.release_date}</li>
-              <li className="cardItem">Producer: {films.producer}</li>
-              <li className="cardItem">Director: {films.director}</li>
-              <li className="cardItem">Opening Crawl: <button className="modalBtn" onClick={() => setModal(!modal)}>See Content</button></li>
-            </ul>
-            </div>
+        <h1 className="pageTitle">Films</h1>
+        <div className="cards">
+          {data &&
+            data.map((films) => (
+              <>
+                <div className="card films"  >
+                  <ul className="cardItems">
+                    <li className="cardItem">Title: {films.title}</li>
+                    <li className="cardItem">Episode: {films.episode_id}</li>
+                    <li className="cardItem">Release Date: {films.release_date}</li>
+                    <li className="cardItem">Producer: {films.producer}</li>
+                    <li className="cardItem">Director: {films.director}</li>
+                    <li className="cardItem">
+                      Opening Crawl:{" "}
+                      <button
+                        className="modalBtn"
+                        onClick={() => setModalTitle(films.title)}
+                      >
+                        See Content
+                      </button>
+                    </li>
+                  </ul>
+                </div>
 
-            <div className={`modal ${modal ? "active" : "inactive"}`}>
-              <h2>{films.title}</h2>
-              <p>{films.opening_crawl}</p>
-              <button className="modalBtn" onClick={() => setModal(!modal)}>Close</button>
-            </div>
-            </>
-          ))}
-      </div>
+                <div className={`modal ${films.title==modalTitle ? "active" : "inactive"}`}>
+                  <h2>{films.title}</h2>
+                  <p>{films.opening_crawl}</p>
+                  <button className="modalBtn" onClick={() => setModalTitle(false)}>
+                    Close
+                  </button>
+                </div>
+              </>
+            ))}
+        </div>
       </>
     );
   }
