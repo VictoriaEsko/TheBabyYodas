@@ -29,7 +29,7 @@ img {
   /* margin: 0em 0em 0em 21em; */
 }
 .back {
-  /* position: fixed; */
+  position: fixed;
   left: 5px;
   top: 5px;
   border-radius: 50%;
@@ -43,37 +43,44 @@ img {
   background-color: rgba(36, 36, 36, 0.1);
   cursor: pointer;
 }
-
-.category-close,
-.category-open,
-.category {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  place-items: center;
-  color: #80b6e8;
-  margin: 0em 15em 10em 15em;
+.back svg {
+  margin-top: 8px;
 }
+
+.back:hover {
+  background-color: rgba(36, 36, 36, 0.4);
+}
+
 .category-close {
   /* När category- menyn är stängd*/
   width: 21em;
-  height: fit-content;
-  margin: auto;
+  height: 3em;
   font-size: 21px;
   font-weight: 700;
   background-color: rgba(37, 26, 44, 0.596);
+
   cursor: pointer;
+  font-weight: 700;
+  border-radius: var(--radius);
+  font-size: 21px;
+  background-color: rgba(37, 26, 44, 0.596);
+  width: 20em;
+  height: 4em;
 }
+
+.category-close h2 {
+  margin-top: 8em;
+}
+
 .category-open {
   /* När category- menyn är öppen*/
-  /* margin-top: 10px; */
   font-weight: 700;
   border-radius: var(--radius);
   font-size: 21px;
   background-color: rgba(37, 26, 44, 0.596);
   width: 20em;
   height: fit-content;
-  margin: auto;
+  /* margin: auto; */
 }
 .category {
   /* wrappen runt alla kategorier */
@@ -81,8 +88,13 @@ img {
   justify-content: center;
   flex-direction: column;
   place-items: center;
+  color: #80b6e8;
+  margin: auto;
+
+  border-radius: 10px;
   /* margin: 0em 15em 10em 15em; */
 }
+
 .category svg {
   transition: all 200ms ease-in;
 }
@@ -115,7 +127,6 @@ img {
   cursor: pointer;
   user-select: none;
   border-radius: var(--radius);
-  /* z-index: 99; */
 }
 .menu-list ul li {
   list-style: none;
@@ -290,5 +301,4 @@ img {
 
     width: 30em;
   }
-
 }
