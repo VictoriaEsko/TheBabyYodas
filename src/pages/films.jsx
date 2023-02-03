@@ -22,7 +22,7 @@ export default function fetchFilms() {
         <div className="cards">
           {data &&
             data.map((films) => (
-              <>
+              <div className="container">
                 <div className="card films">
                   <ul className="cardItems">
                     <li className="cardItem">Title: {films.title}</li>
@@ -58,7 +58,7 @@ export default function fetchFilms() {
                     Close
                   </button>
                 </div>
-              </>
+              </div>
             ))}
         </div>
       </>
