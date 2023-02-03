@@ -18,14 +18,25 @@ export default function fetchSpecies() {
   if (url === "/species") {
     return (
       <>
+      <h1 className="pageTitle">Species</h1>
+      <div className="cards">
         {data &&
           data.map((species) => (
-            <div key={species.url}>
-              <p>{species.name}</p>
-              <p>{species.classification}</p>
-              <br />
+            <div className="card species" key={species.url}>
+            <ul className="cardItems">
+              <li className="cardItem">Name: {species.name}</li>
+              <li className="cardItem">Classification: {species.classification}</li>
+              <li className="cardItem">Average Heigth: {species.average_heigth}</li>
+              <li className="cardItem">Average Lifespan: {species.avarage_lifespan}</li>
+              <li className="cardItem">Designation: {species.designation}</li>
+              <li className="cardItem">Eye Color:{species.eye_colors}</li>
+              <li className="cardItem">Hair Color: {species.hair_colors}</li>
+              <li className="cardItem">Language: {species.language}</li>
+              <li className="cardItem">Skin Color: {species.skin_colors}</li>
+            </ul>
             </div>
           ))}
+      </div>
       </>
     );
   }
