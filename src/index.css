@@ -1,9 +1,242 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Roboto Mono";
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
+  background-image: url(./Img/hd-wallpaper-2695569_1920.jpg);
   background-color: #242424;
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 3em;
+}
 
+.start {
+  display: flex;
+  flex-direction: column;
+}
+img {
+  margin: auto;
+  display: flex;
+  width: 60%;
+
+}
+.title {
+  display: flex;
+  font-size: 3em;
+  justify-content: center;
+  color: #e7d539;
+}
+
+.category-close {
+  /* När category- menyn är stängd*/
+  width: 21em;
+  height: 3em;
+  font-size: 21px;
+  font-weight: 700;
+  background-color: rgba(37, 26, 44, 0.596);
+
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: var(--radius);
+  font-size: 21px;
+  background-color: rgba(37, 26, 44, 0.596);
+  width: 20em;
+  height: 4em;
+}
+
+.category-close h2 {
+  margin-top: 8em;
+}
+
+.category-open {
+  /* När category- menyn är öppen*/
+  font-weight: 700;
+  border-radius: var(--radius);
+  font-size: 21px;
+  background-color: rgba(37, 26, 44, 0.596);
+  width: 20em;
+  height: fit-content;
+  /* margin: auto; */
+}
+.category {
+  /* wrappen runt alla kategorier */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  place-items: center;
+  color: #80b6e8;
+  margin: auto;
+
+  border-radius: 10px;
+}
+
+.category svg {
+  transition: all 200ms ease-in;
+}
+.category.category-open svg {
+  transform: rotate(-180deg);
+}
+
+.menu-close {
+  /* när category är dold*/
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-25px);
+}
+.menu-open {
+  /*När category är visible*/
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.menu-list {
+  transition: all 250ms ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  width: 60%;
+  font-size: 21px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  border-radius: var(--radius);
+}
+.menu-list ul li {
+  list-style: none;
+}
+.menu-list ul li :hover {
+  color: #e7d539;
+}
+.menu-list a {
+  color: #80b6e8;
+  text-decoration: none;
+}
+.cards {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 2em;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: rgba(5, 12, 47, 0.674);
+  box-shadow: 2px 4px 10px rgba(0, 5, 29);
+  border-radius: 3%;
+  width: 80%;
+  /* max-width: 40vw; */
+}
+
+.cardItems {
+  color: rgba(238, 241, 44, 0.87);
+  width: 80%;
+  padding: 1em;
+}
+
+.cardItem {
+  list-style: none;
+
+  padding: 0.5em;
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: rgba(5, 12, 47, 0.674);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  color: rgba(238, 241, 44, 0.87);
+  width: 80%;
+  height: fit-content;
+  transition: all 250ms ease;
+}
+.modal.inactive {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+.modalBtn {
+  background: none;
+  outline: none;
+  border: none;
+  color: rgba(238, 241, 44, 0.87);
+  padding: 15px 35px;
+  background-color: rgba(107, 115, 164, 0.3);
+  backdrop-filter: blur(5px);
+  margin-top: 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.pageTitle {
+  color: rgba(207, 210, 36, 0.87);
+  text-shadow: 1px 2px 15px #c6c662;
+
+  text-align: center;
+  margin-bottom: 2em;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+
+@media screen and (min-width: 840px) {
+  body {
+    width: auto;
+  }
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    place-content: center;
+  }
+
+  .card {
+    width: 30em;
+    min-height: 55vh;
+  }
+
+  .people {
+    height: 41vh;
+  }
+
+  .container {
+    position: relative;
+  }
+  .planets .species .vehicles {
+    height: 50vh;
+  }
+
+  .starships {
+    height: 66vh;
+  }
+
+  .cardItems {
+    width: 80%;
+  }
+
+  .modal {
+    position: absolute;
+    flex-wrap: wrap;
+
+    width: 30em;
+  }
 }
