@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 export default function fetchFilms() {
   const [data, setData] = useState("");
-  const [modal, setModal] = useState(false);
   const [ modal, setModal ] = useState(false);
 
   useEffect(() => {

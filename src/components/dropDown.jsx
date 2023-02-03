@@ -1,9 +1,10 @@
 import { Route, Routes, Link } from "react-router-dom";
 import { useState } from "react";
-
+import {MdKeyboardArrowDown} from "react-icons/md"
 
 export default function dropDown() {
   const [state, setState] = useState(false);
+  
 
   //   const toggle = ()=>{
   //     setState(!state);
@@ -18,6 +19,7 @@ export default function dropDown() {
       
     >
       <h2>Choose category </h2>
+      <MdKeyboardArrowDown />
       <div>
         {/* <button onClick={toggle} className={`toggle-btn + ${state ? "toggle-close" : "toggle-open"}`}>
           Category
